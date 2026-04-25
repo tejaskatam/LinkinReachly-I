@@ -31,7 +31,7 @@ function executionCsvHeaderHints(
 }
 
 function splitCsvCells(line: string): string[] {
-  return line.match(/("([^"]|"")*"|[^,]+)/g)?.map((c) => c.replace(/^"|"$/g, '').replace(/""/g, '"')) ?? []
+  return line.match(/("([^"]|"")*"|[^,]*)/g)?.map((c) => c.replace(/^"|"$/g, '').replace(/""/g, '"')) ?? []
 }
 
 function firstNameFromText(text: string): string | undefined {
